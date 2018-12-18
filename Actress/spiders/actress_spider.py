@@ -8,7 +8,7 @@ class ActressSpiderSpider(scrapy.Spider):
     allowed_domains = ['javbus.com']
     start_urls = [
         'https://www.javbus.com/actresses',
-        'https://www.busdmm.cc/uncensored/actresses'
+        'https://www.javbus.com/uncensored/actresses'
     ]
 
     def parse(self, response):

@@ -2,7 +2,7 @@
 
 ---
 
-#### 注意：针对JavBus的演员信息进行抓取，并将演员姓名，演员参演作品，作品番号以及上映时间存入数据库。仅供学习交流使用，勿作他用。
+#### 注意：针对JavBus的演员信息进行抓取，并将演员姓名，演员头像，演员参演作品，作品封面图，作品番号以及上映时间存入数据库。仅供学习交流使用，勿作他用。
 
 
 
@@ -38,6 +38,8 @@ CREATE TABLE `actress` (
   `tag` varchar(255) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `film` varchar(255) DEFAULT NULL,
+  `images` varchar(255) DEFAULT NULL,
+  `thumbs` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=268223 DEFAULT CHARSET=utf8;
 ```
@@ -50,7 +52,9 @@ CREATE TABLE `actress` (
 scrapy crawl actress_spider
 ```
 
+或者
 
+`python main.py`
 
 #### 结果说明
 
@@ -59,5 +63,7 @@ name: 演员名字
 film: 演员作品
 tag: 作品番号
 date: 上映时间
+images：演员头像url
+thumbs：作品封面url
 ```
 

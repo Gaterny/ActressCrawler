@@ -19,6 +19,11 @@ class ActressItem(scrapy.Item):
     tag = scrapy.Field()
     # 作品时间
     date = scrapy.Field()
+    # 演员头像url
+    images = scrapy.Field()
+
+    # 作品封面
+    thumbs = scrapy.Field()
 
     # 年龄
     # age = scrapy.Field()

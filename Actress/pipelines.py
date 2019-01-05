@@ -36,7 +36,7 @@ class MysqlPipeline(object):
         self.db.close()
 
     def process_item(self, item, spider):
-        sql = """insert into actress(name, film, tag, date) values(%s, %s, %s, %s)"""
-        self.cursor.execute(sql, (item['name'], item['film'], item['tag'], item['date']))
+        sql = """insert into actress(name, film, tag, date, images, thumbs) values(%s, %s, %s, %s, %s, %s)"""
+        self.cursor.execute(sql, (item['name'], item['film'], item['tag'], item['date'], item['images'], item['thumbs']))
         self.db.commit()
         return item
